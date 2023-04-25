@@ -2,7 +2,6 @@
 
 //Parametros//
 
-
 1- Login
 
     1.1 Bloqueo de usuario a los tres intentos
@@ -10,7 +9,6 @@
     1.3 Permisos de Solo consulta, inserción y/o actualización.
     1.4 Configuración de opciones visibles o no visibles.
     1.5 Configuración de opciones habilitadas o no habilitadas.
-
 
 2- Manejo de Roles y Perfiles
 
