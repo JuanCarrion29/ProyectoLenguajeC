@@ -54,6 +54,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="1.Designer.cs">
+      <DependentUpon>1.cs</DependentUpon>
+    </Compile>
     <Compile Include="CondominioDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
