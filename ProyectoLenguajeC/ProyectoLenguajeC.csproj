@@ -33,8 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FontAwesome.Sharp, Version=6.3.0.0, Culture=neutral, PublicKeyToken=d16d1e4e568ec10f, processorArchitecture=MSIL">
+      <HintPath>..\packages\FontAwesome.Sharp.6.3.0\lib\net472\FontAwesome.Sharp.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,16 +51,94 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
+    <Compile Include="CondominioDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CondominioDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="CondominioDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CondominioDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CondominioDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CondominioDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\UsuarioP.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositorio\DataB.cs" />
+    <Compile Include="Vista\FormInquilinos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormInquilinos.Designer.cs">
+      <DependentUpon>FormInquilinos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormMantenimiento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormMantenimiento.Designer.cs">
+      <DependentUpon>FormMantenimiento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\VistaReportes\FormReportesUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VistaReportes\FormReportesUsuarios.Designer.cs">
+      <DependentUpon>FormReportesUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormSalones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormSalones.Designer.cs">
+      <DependentUpon>FormSalones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\FormSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\FormSettings.Designer.cs">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\VistaReportes\InquilinosRepForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VistaReportes\InquilinosRepForm.Designer.cs">
+      <DependentUpon>InquilinosRepForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\VistaReportes\MantenimientosRepForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VistaReportes\MantenimientosRepForm1.Designer.cs">
+      <DependentUpon>MantenimientosRepForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\VistaReportes\SalonesRepForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\VistaReportes\SalonesRepForm.Designer.cs">
+      <DependentUpon>SalonesRepForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\UsuariosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\UsuariosForm.Designer.cs">
+      <DependentUpon>UsuariosForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -62,7 +147,75 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vista\FormInquilinos.resx">
+      <DependentUpon>FormInquilinos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormMantenimiento.resx">
+      <DependentUpon>FormMantenimiento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VistaReportes\FormReportesUsuarios.resx">
+      <DependentUpon>FormReportesUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormSalones.resx">
+      <DependentUpon>FormSalones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\FormSettings.resx">
+      <DependentUpon>FormSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VistaReportes\InquilinosRepForm.resx">
+      <DependentUpon>InquilinosRepForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VistaReportes\MantenimientosRepForm1.resx">
+      <DependentUpon>MantenimientosRepForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\VistaReportes\SalonesRepForm.resx">
+      <DependentUpon>SalonesRepForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\UsuariosForm.resx">
+      <DependentUpon>UsuariosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CondominioDataSet.xsc">
+      <DependentUpon>CondominioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CondominioDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CondominioDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CondominioDataSet.xss">
+      <DependentUpon>CondominioDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CondominioDataSet1.xsc">
+      <DependentUpon>CondominioDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CondominioDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CondominioDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CondominioDataSet1.xss">
+      <DependentUpon>CondominioDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CondominioDataSet2.xsc">
+      <DependentUpon>CondominioDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CondominioDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CondominioDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CondominioDataSet2.xss">
+      <DependentUpon>CondominioDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +228,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Imagenes\close.png" />
+    <Content Include="Imagenes\CloseIco.png" />
+    <Content Include="Imagenes\condominioFot.png" />
+    <Content Include="Imagenes\kisspng-apartamentos-liv-condominium-edificios-de-apartame-apartamento-edificio-el-rosario-5b250bdeb65a42.2314325415291545267469.png" />
+    <Content Include="Imagenes\transparent-interface-icon-basic-application-icon-close-icon-5d9515d682a3b6.6139442015700515425351.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
